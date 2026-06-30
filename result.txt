@@ -1,0 +1,49 @@
+Loading NGSIM from 'dataset.txt' ...
+  ✓ 1,180,598 rows, 595 vehicles
+
+============================================================
+AoI-Optimal UAV Relay · IEEE WCL
+  Mobility: NGSIM US-101
+  SEED=42  N_TRIALS=50  N_VEH=8  K=6
+  Nakagami-m: V2V m=1.5  U2V m=3.0
+============================================================
+
+  No Relay                AoI=0.6490±0.4872  Risk=0.0728  DR=82.3%
+  Random                  AoI=0.2175±0.0101  Risk=0.0165  DR=90.5%
+  Round-Robin             AoI=0.2146±0.0085  Risk=0.0156  DR=90.4%
+  Tput-Opt                AoI=0.2310±0.0295  Risk=0.0205  DR=90.5%
+  Age-Threshold           AoI=0.2153±0.0074  Risk=0.0155  DR=88.3%
+  AoI-Opt (Ours)          AoI=0.2111±0.0058  Risk=0.0146  DR=90.5%
+
+Scalability sweep...
+  N= 4: AoI-Opt=0.2009s  Tput-Opt=0.2009s  gain=0.0%
+  N= 6: AoI-Opt=0.2041s  Tput-Opt=0.2060s  gain=1.0%
+  N= 8: AoI-Opt=0.2120s  Tput-Opt=0.2320s  gain=8.6%
+  N=10: AoI-Opt=0.2212s  Tput-Opt=0.2773s  gain=20.2%
+  N=12: AoI-Opt=0.2338s  Tput-Opt=0.3831s  gain=39.0%
+  N=14: AoI-Opt=0.2300s  Tput-Opt=0.3452s  gain=33.4%
+
+Sensitivity sweep (alt × K)...
+  h30_K4: AoI-Opt=0.2159  Tput=0.2690
+  h30_K6: AoI-Opt=0.2104  Tput=0.2293
+  h30_K8: AoI-Opt=0.2059  Tput=0.2147
+  h60_K4: AoI-Opt=0.2205  Tput=0.3058
+  h60_K6: AoI-Opt=0.2119  Tput=0.2380
+  h60_K8: AoI-Opt=0.2073  Tput=0.2164
+  h120_K4: AoI-Opt=0.2205  Tput=0.2819
+  h120_K6: AoI-Opt=0.2104  Tput=0.2300
+  h120_K8: AoI-Opt=0.2076  Tput=0.2146
+
+NGSIM robustness sweep (smoothing windows)...
+  sw=5: AoI-Opt=0.2132  Tput=0.2281
+  sw=10: AoI-Opt=0.2139  Tput=0.2395
+  sw=20: AoI-Opt=0.2114  Tput=0.2330
+
+Jitter sweep...
+  σ_J=0.000: AoI-Opt=0.2107  Tput=0.2291
+  σ_J=0.010: AoI-Opt=0.2143  Tput=0.2496
+  σ_J=0.020: AoI-Opt=0.2125  Tput=0.2304
+  σ_J=0.050: AoI-Opt=0.2102  Tput=0.2358
+
+Total time: 164.8 s
+Simulation complete — run individual figure cells below
